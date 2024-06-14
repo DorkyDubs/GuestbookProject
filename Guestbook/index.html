@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <header></header>
+    <div id="app">
+      <form id="userDataForm">
+        <label for="Username">Username: </label>
+        <input type="text" name="Username" id="Username" required />
+        <label for="city">City: </label>
+        <input type="text" name="city" id="city" required />
+
+        <label for="fav_colour">Favourite Colour: </label>
+        <input type="text" name="fav_colour" id="fav_colour" required />
+        <label for="fav_number">Favourite Number: </label>
+        <input type="text" name="fav_number" id="fav_number" required />
+        <label for="message">Message for other users: </label>
+        <input type="text" name="message" id="message" required />
+        <input type="submit" value="submit" />
+      </form>
+      <div id="display"></div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
