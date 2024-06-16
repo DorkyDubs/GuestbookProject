@@ -1,4 +1,4 @@
-import { db } from "../server/server";
+// import { db } from "../server/server";
 
 const form = document.getElementById("userDataForm");
 
