@@ -1,5 +1,3 @@
-// import { db } from "../server/server";
-
 const form = document.getElementById("userDataForm");
 
 // async function updateLikes(updatedItem) {
