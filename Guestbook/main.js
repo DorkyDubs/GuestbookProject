@@ -34,8 +34,9 @@ const form = document.getElementById("userDataForm");
 
 async function fetchAndRenderData() {
   ///creates display on site after submission
-  const response = await fetch();
-  `https://guestbookassignment-client.onrender.com/`; // want server url on render local while testing
+  const response = await fetch(
+    `https://guestbookassignment-client.onrender.com/`
+  ); // want server url on render local while testing
   const ourList = await response.json();
   const listDiv = document.getElementById("display"); //main box
   listDiv.innerHTML = "";
