@@ -2,29 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
+    <script type="module" src="/main.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title></title>
   </head>
   <body>
-    <header></header>
-    <div id="app">
+    <header>
+      <h1>The <br />Guestbook</h1>
+    </header>
+    <section id="app">
       <form id="userDataForm">
-        <label for="Username">Username: </label>
-        <input type="text" name="Username" id="Username" required />
-        <label for="city">City: </label>
-        <input type="text" name="city" id="city" required />
-
-        <label for="fav_colour">Favourite Colour: </label>
-        <input type="text" name="fav_colour" id="fav_colour" required />
-        <label for="fav_number">Favourite Number: </label>
-        <input type="text" name="fav_number" id="fav_number" required />
-        <label for="message">Message for other users: </label>
-        <input type="text" name="message" id="message" required />
-        <input type="submit" value="submit" />
+        <!-- put each field into own div to controlflow when optimizing for screen size, so div soup this week -->
+        <div>
+          <label for="Username">Username: </label>
+          <input type="text" name="Username" id="Username" required />
+        </div>
+        <div>
+          <label for="city">City: </label>
+          <input type="text" name="city" id="city" required />
+        </div>
+        <div>
+          <label for="fav_colour">Favourite Colour: </label>
+          <input type="text" name="fav_colour" id="fav_colour" required />
+        </div>
+        <div>
+          <label for="fav_number">Favourite Number: </label>
+          <input type="text" name="fav_number" id="fav_number" required />
+        </div>
+        <div>
+          <label for="message">Message for other users: </label>
+          <input type="text" name="message" id="message" required />
+        </div>
+        <div><input type="submit" value="submit" id="submit-button" /></div>
+        <!-- can we get rid of the div for the button? -->
       </form>
-      <div id="display"></div>
-    </div>
-    <script type="module" src="/main.js"></script>
+      <section id="display"></section>
+    </section>
   </body>
 </html>

@@ -1,4 +1,6 @@
-:root {
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -11,7 +13,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+  box-sizing: border-box;
+} */
 
 a {
   font-weight: 500;
@@ -25,9 +28,6 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -36,25 +36,61 @@ h1 {
 }
 
 #app {
+  display: flex;
+  flex-direction: column;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
+/* These are bespoke elements, the rest is vite and may need changing or discarding */
+#userDataForm {
+  /* width: 100vw; */
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
+.userSubmittedContentDisplay {
+  border: 1px dashed darkblue;
+
+  background-color: #9599f7;
+  color: rgb(1, 1, 100);
+}
+
+.submitted-data-div {
+  display: flex;
+}
+.data-div {
+  border: 0.5px solid bisque;
+}
+.message-div {
+  border: 0.5px solid bisque;
+}
+.buttons-div {
+  border: 0.5px solid bisque;
+}
+
+#submit-button {
+  background-color: #888;
+  border: 1px solid goldenrod;
+  border-radius: 10%;
+}
+.like-button {
+  color: antiquewhite;
+}
+
+.delete-button {
+  background-color: #9599f7;
+  font-weight: bold;
+}
+header {
+  background-color: rgb(61, 27, 186);
+  color: aliceblue;
+}
+/* Custom tags end here 
+ */
 .card {
   padding: 2em;
 }
@@ -85,12 +121,30 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: cornsilk;
   }
   a:hover {
     color: #747bff;
   }
   button {
     background-color: #f9f9f9;
+  }
+  .userSubmittedContentDisplay {
+    border: 1px dashed goldenrod(91, 148, 232);
+  }
+  #submit-button {
+    background-color: #888;
+    border: 1px solid goldenrod;
+    border-radius: 10%;
+  }
+
+  header {
+    background-color: rgb(247, 236, 123);
+    color: #213547;
+  }
+}
+@media (max-width: 400px) {
+  #userDataForm {
+    flex-direction: column;
   }
 }

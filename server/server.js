@@ -47,15 +47,18 @@ app.get("/pets", async (req, res) => {
 // )`); //send to seed?
 
 app.post(`/userdata`, async (req, res) => {
-  //match form data andend point
-  const { username, city, fav_colour, fav_number, message } = req.body;
+  //match form data at end point
 
+  // switch (Object.length(Object.keys(req.body)))  //prep for like and delete functions
+
+  const { username, city, fav_colour, fav_number, message, likes } = req.body;
+  // db.query('UPDATE userdata WHERE id = ${item.id} SET likes = ${item.likes + 1}'); same ^^
   try {
     await db.query(
-      `INSERT into userdata (username, city, fav_colour, fav_number, message) Values ($1, $2, $3, $4, $5)`,
-      [username, city, fav_colour, fav_number, message]
+      `INSERT into userdata (username, city, fav_colour, fav_number, message, likes) Values ($1, $2, $3, $4, $5, $6)`,
+      [username, city, fav_colour, fav_number, message, 0]
     );
-
+    // db.query('UPDATE userdata WHERE id = ${item.id} SET likes = ${item.likes + 1}');
     res.status(200).json({ success: true });
   } catch (error) {
     console.error("Nope", error);

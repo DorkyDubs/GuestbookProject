@@ -8,5 +8,5 @@ db.query(`CREATE TABLE IF NOT EXISTS userdata (
     city VARCHAR(255),
     fav_colour VARCHAR(255),
     fav_number NUMERIC,
-    message TEXT
-    )`);
+    message TEXT,
+    likes NUMERIC)`);
