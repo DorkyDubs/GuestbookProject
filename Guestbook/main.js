@@ -2,40 +2,40 @@
 
 const form = document.getElementById("userDataForm");
 
-async function updateLikes(updatedItem) {
-  const dataUpdate = { id: item.id, likes: item.likes };
+// async function updateLikes(updatedItem) {
+//   const dataUpdate = { id: item.id, likes: item.likes };
 
-  try {
-    const response = await fetch(
-      `https://guestbookassignment-client.onrender.com/userdata`, //change for site
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(dataUpdate),
-      }
-    );
+//   try {
+//     const response = await fetch(
+//       `https://guestbookassignment-client.onrender.com/userdata`, //change for site
+//       {
+//         method: "POST",
+//         headers: {
+//           "content-type": "application/json",
+//         },
+//         body: JSON.stringify(dataUpdate),
+//       }
+//     );
 
-    const data = await response.json();
+//     const data = await response.json();
 
-    if (data.success) {
-      console.log("Data saved - nice one");
-      return true;
-    } else {
-      console.log("fluffed it");
-      return false;
-    }
-  } catch (error) {
-    console.log("erroneous", error);
-    return false;
-  }
-}
+//     if (data.success) {
+//       console.log("Data saved - nice one");
+//       return true;
+//     } else {
+//       console.log("fluffed it");
+//       return false;
+//     }
+//   } catch (error) {
+//     console.log("erroneous", error);
+//     return false;
+//   }
+// }
 
 async function fetchAndRenderData() {
   ///creates display on site after submission
   const response = await fetch();
-  `https://guestbookassignment-client.onrender.com/userdata`; // want server url on render local while testing
+  `https://guestbookassignment-client.onrender.com/`; // want server url on render local while testing
   const ourList = await response.json();
   const listDiv = document.getElementById("display"); //main box
   listDiv.innerHTML = "";
@@ -94,7 +94,7 @@ async function submitButton(event) {
   const formValues = Object.fromEntries(formData);
   try {
     const response = await fetch(
-      `https://guestbookassignment-client.onrender.com/userdata`, //change for site
+      `https://guestbookassignment-client.onrender.com/`, //change for site
       {
         method: "POST",
         headers: {
