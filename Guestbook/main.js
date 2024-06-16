@@ -35,7 +35,7 @@ const form = document.getElementById("userDataForm");
 async function fetchAndRenderData() {
   ///creates display on site after submission
   const response = await fetch(
-    `https://guestbookassignment.onrender.com/userdata`
+    `https://guestbookproject.onrender.com/userdata`
   ); // want server url on render local while testing
   const ourList = await response.json();
   const listDiv = document.getElementById("display"); //main box
@@ -95,7 +95,7 @@ async function submitButton(event) {
   const formValues = Object.fromEntries(formData);
   try {
     const response = await fetch(
-      `https://guestbookassignment.onrender.com/userdata`, //change for site
+      `https://guestbookproject.onrender.com/userdata`, //change for site
       {
         method: "POST",
         headers: {
